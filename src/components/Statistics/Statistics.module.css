@@ -15,12 +15,6 @@
     list-style-type: none;
 }
 
-.item {
-    display: grid;
-    padding: 20px 30px;
-    justify-items: center;
-}
-
 .label {
     color: white;
     margin-bottom: 10px;

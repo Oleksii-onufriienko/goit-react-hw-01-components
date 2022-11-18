@@ -1,0 +1,5 @@
+.friend__list {
+    margin-top: 50px;
+    display: grid;
+    justify-items: center;
+}
