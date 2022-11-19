@@ -2,20 +2,22 @@ import css from './FriendListItem.module.css';
 
 import PropTypes from 'prop-types';
 
-export default function FriendListItem({ avatar, name, isOnline, id }) {
-    const colorOnline = isOnline ? { backgroundColor: "red" } : { backgroundColor: "green" };
+export default function FriendListItem({ friends }) {
     return (
-        <li key={id} className={css.item}>
-            <span className={css.status} style={colorOnline}></span>
-            <img className={css.avatar} src={avatar} alt="User avatar" width="48" />
-            <p className={css.name}>{name}</p>
+        friends.map(friend => { 
+            return (
+        <li key={friend.id} className={css.item}>
+            <span className={css.status} style={friend.isOnline ? { backgroundColor: "red" } : { backgroundColor: "green" }}></span>
+            <img className={css.avatar} src={friend.avatar} alt="User avatar" width="48" />
+            <p className={css.name}>{friend.name}</p>
         </li>
+            )
+        })
+
     );
 }
 
 FriendListItem.propTypes = {
-    avatar: PropTypes.string,
-    name: PropTypes.string,
-    isOnline: PropTypes.bool,
-    id: PropTypes.number,
+    friends: PropTypes.array,
+
 }
