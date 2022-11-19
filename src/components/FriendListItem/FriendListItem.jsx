@@ -19,5 +19,4 @@ export default function FriendListItem({ friends }) {
 
 FriendListItem.propTypes = {
     friends: PropTypes.array,
-
 }

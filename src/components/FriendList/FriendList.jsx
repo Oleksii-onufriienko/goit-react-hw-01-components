@@ -4,7 +4,6 @@ import FriendListItem from '../FriendListItem/FriendListItem';
 import PropTypes from 'prop-types';
 
 export default function FriendList({ friends }) {
-    // console.log(friendsList);
     return (
         <ul className={css.friend__list}>
             <FriendListItem friends={friends} />
