@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 export default function TransactionHistory({items}) {
     return (
-      <table className={css.table__center}>
+<table className={css.table__center}>
   <thead>
     <tr>
       <th>Type</th>
