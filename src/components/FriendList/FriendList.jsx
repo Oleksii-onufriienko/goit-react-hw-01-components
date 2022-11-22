@@ -6,7 +6,9 @@ import PropTypes from 'prop-types';
 export default function FriendList({ friends }) {
     return (
         <ul className={css.friend__list}>
-            <FriendListItem friends={friends} />
+            {friends.map(friend => { 
+                return (<FriendListItem key={friend.id} friend={friend}/>)
+            })}
         </ul>
     );
 };

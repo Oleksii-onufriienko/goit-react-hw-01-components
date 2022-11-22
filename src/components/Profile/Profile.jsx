@@ -4,14 +4,13 @@ import PropTypes from 'prop-types';
 
 export default function Profile({ username, tag, location, avatar, stats }) {
   return (
-   <div className={css.profile}>
+  <div className={css.profile}>
       <div className={css.description}>
         <img src={avatar} alt="User avatar" className={css.avatar} />
         <p className={css.name}>{username}</p>
         <p className={css.tag}>@{tag}</p>
         <p className={css.location}>{location}</p>
       </div>
-
       <ul className={css.stats}>
         <li className={css.stats__list}>
           <span className={css.label}>Followers</span>
@@ -26,7 +25,7 @@ export default function Profile({ username, tag, location, avatar, stats }) {
           <span className={css.quantity}>{stats.likes}</span>
         </li>
       </ul>
-    </div>
+  </div>
   );
 }
 
